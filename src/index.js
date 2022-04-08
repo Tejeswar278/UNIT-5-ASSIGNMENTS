@@ -1,8 +1,13 @@
-import { myimage} from "./image.jpg"
+import  myimage from "./image.jpg";
 
-const image1 = document.createElement("img");
-image1.src = myimage;
-document.querySelector("#root1").append(image1);
+import ("./index.css")
+
+
+// image1.appendChild(myimage);
+// 
+// document.querySelector("#root1").append(image1);
+
+
 document.querySelector("form").addEventListener("submit",fn1);
 
 function fn1(event){
@@ -10,6 +15,20 @@ function fn1(event){
     var note  = document.querySelector("#root").value;
     console.log(note);
     document.querySelector("#root1").append(note);
+    
+    
 }
+
+
+function component(){
+    const element = document.createElement("div");
+    const myIcon = new Image();
+    myIcon.src = myimage;
+    element.appendChild(myIcon);
+    return element;
+}
+document.body.appendChild(component());
+
+
 
 
